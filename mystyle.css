@@ -164,7 +164,7 @@ table .submit {
     background-color: rgb(0, 139, 139);
 }
 
-input[type="text"], input[type="password"], input[type="email"], input[type="date"] {
+input[type="text"], input[type="password"], input[type="email"], input[type="date"], input[type="tel"] {
     width: 30vw;
     padding: 12px;
     border: none;
