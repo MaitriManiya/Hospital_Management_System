@@ -1,22 +1,69 @@
+<!--Doctype-->
+<html lang="en">
+
 <html>
 <head>
+    <title>Generate Certificate</title>
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
 </head>
-<div>
-  <div>
-    <div>
-        
+<body>
+    
+    <div class="top_nav">
+        <a href="logout.html">Logout</a>
+        <a href="login.html">Login</a>
+        <a href="profile.html">Profile</a>
+        <a href="manageDoctors.html">Doctors</a>
+        <a href="managePatients.html">Patients</a>
+        <a href="index.html">Home</a> 
     </div>
-    <form action="#" method="POST">
-        <a href="adminPages.html">Home</a>
-        <h1>Generate Certificate</h1>
-        <table>
-            <tr><td>Name:</td><td><input type="text" name="name" placeholder="Name"></td></tr>
-            <tr><td>Disease Discription:</td><td><textarea id="discription" rows="5" cols="50"></textarea></td></tr>
-            <tr><td>Number of Days for leave:</td><td><input type="text" name="leave days" ></td></tr>
-        </table><br><bR>
-        <input type="submit"  value="Generate">
-    </form>
 
-  </div>
-</div>
+    <div class="sidenav">
+                <a href="createCase.html">Create New Case</a>
+                <a href="AdmitPatient.html">Admit Patient</a>
+                <a href="DischargePatient.html">Discharge Patient</a>
+                <a href="GenerateBill.html">Generate Bill</a>
+                <a href="GenerateCertificate.html">Generate Certificate</a>
+                <a href="ViewAllPatients.html">View All Patinets</a>
+    </div>
+    
+   
+    <div class="container">
+         <h1 style="text-align: center; margin-right: 130px;">Generate Certificate</h1>
+        
+        <table>
+        
+            <tr>
+                <td>Name:</td>
+                <td class="high"><input type="text" name="name" required></td>
+            </tr>
+            <tr>
+                <td class="low"><input type="text" name="name" required></td>
+            </tr>
+            <tr>
+                <td>Dieases discription: </td>
+                <td class="high"><input type="text"  name="diease" required></td>
+            </tr>
+            <tr>
+                <td class="low"><input type="text"  name="diease" required></td>
+            </tr>
+            
+            <tr>
+                <td>Number of days for leave:</td>
+                <td class="high"><input type="text" name="days" required></td>
+            </tr>
+            <tr>
+                <td class="low"><input type="text name="days" required></td>
+            </tr>
+            
+            
+            
+            <tr>
+                <!-- <td></td> -->
+                <td><a href="#"><button class="submit">Generate</button></a></td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+
 </html>

@@ -1,34 +1,87 @@
+<!DOCTYPE html>
 <html>
 <head>
+    <title>Manage Doctos</title>
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
 </head>
-<div>
-  <div>
-    <div>
+<body>
+    <div class="top_nav">
+        <a href="logout.html">Logout</a>
+        <a href="login.html">Login</a>
+        <a href="profile.html">Profile</a>
         
+        <a href="manageDoctors.html">Doctors</a>
+        <a href="managePatients.html">Patients</a>
+        <a href="index.html">Home</a> 
     </div>
-    <form action="#" method="POST">
-        <a href="adminPages.html">Home</a>
-        <h1>Add Doctor</h1>
-        <table>
-            <tr><td>Name:</td><td><input type="text" name="name" placeholder="Name"></td></tr>
-            <tr><td>Doctor ID:</td><td><input type="text" name="did" placeholder="ID"></td></tr>
-            <tr><td>Address</td><td><input type="text" name="address" placeholder="Address"></td></tr>
-            <tr><td>Email id</td><td><input type="Email" name="email" placeholder="Email"></td></tr>
-            <tr><td>Contact No</td><td><input type="text" name="contact" placeholder="Contact number"></td></tr>
-            <tr><td>Specialist</td><td><input type="text" name="specialist" placeholder="specialist in"></td></tr>
-            <tr><td>Password:</td><td><input type="password" id="password" placeholder="Password"></td></tr>
-            <tr>
-                <td>
-                    <input type="reset" name="cancle" value="Cancle">  
-                </td>
-                <td>
-                    <input type="submit" name="add" value="Add">  
-                </td>
-            </tr>
-        </table><br><bR>
+    <div class="sidenav">
+                <a href="ViewAllDoctors.html">View All Doctors</a>
+                <a href="AddDoctor.html">Add Doctor</a>
+    </div>
+    <div class="container" style="height:auto;">
+         <h1 style="text-align: center; margin-right: 130px;">Add Doctor</h1>
         
-    </form>
-
-  </div>
-</div>
+        <table>
+            <tr>
+                <td>Name:</td>
+                <td class="high"><input type="text" name="name" required></td>
+            </tr>
+            <tr>
+                <td class="low"><input type="text" name="name" required></td>
+            </tr>
+            <tr>
+                <td>Doctor Id :</td>
+                <td class="high"><input type="text" name="did" required></td>
+            </tr>
+            <tr>
+                <td class="low"><input type="text" name="did" required></td>
+            </tr>
+            <tr>
+                <td>Address:</td>
+                <td class="high"><input type="text" name="address" required></td>
+            </tr>
+            <tr>
+                <td class="low"><input type="text name="address" required></td>
+            </tr>
+            <tr>
+                <td>Email Id: </td>
+                <td class="high"><input type="email"  name="email" required></td>
+            </tr>
+            <tr>
+                <td class="low"><input type="email"  name="email" required></td>
+            </tr>
+            <tr>
+                <td>Contact No: </td>
+                <td class="high"><input type="text" name="num" required></td>
+            </tr>
+            <tr>
+                <td class="low"><input type="text" name="num" required></td>
+            </tr>
+            <tr>
+                <td>Specialist: </td>
+                <td class="high"><input type="text" name="spe" required></td>
+            </tr>
+            <tr>
+                <td class="low"><input type="text" name="spe" required></td>
+            </tr>
+            <tr>
+                <td>Password: </td>
+                <td class="high"><input type="password" name="pass" required></td>
+            </tr>
+            <tr>
+                <td class="low"><input type="password" name="pass" required></td>
+            </tr>
+            <tr>
+                <td>Confirm Password: </td>
+                <td class="high"><input type="password" name="cpass" required></td>
+            </tr>
+            <tr>
+                <td class="low"><input type="password" name="cpass" required></td>
+            </tr>
+            <tr colspan="2">
+                <!-- <td></td> -->
+                <td><a href="#"><button class="submit">Add</button></a></td>
+            </tr>
+        </table>
+</body>
 </html>

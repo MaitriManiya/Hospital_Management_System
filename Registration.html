@@ -1,38 +1,107 @@
+<!DOCTYPE html>
 <html>
 <head>
+    <title>Admin Page</title>
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
 </head>
-<div>
-  <div>
-    <div>
-        <h1>Register</h1>
-    </div>
-    <form action="#" method="POST">
-        <table>
-            <tr><td>First name:</td><td><input type="text" name="first name" placeholder="first name"></td></tr>
-            <tr><td>Middle name:</td><td><input type="text" name="middle name" placeholder="middle name"></td></tr>
-            <tr><td>Last name:</td><td><input type="text" name="last name" placeholder="last name"></td></tr>
-            <tr><td>Gender:</td>
-            <td>
-                <input type="radio" id="male" name="gender" value="male">
-                <label for="male">Male</label>
-                <input type="radio" id="female" name="gender" value="female">
-                <label for="female">Female</label>
-                <input type="radio" id="other" name="gender" value="other">
-                <label for="other">Other</label>
-            </td></tr>
-            <tr><td>Date of Birth:</td><td><input type="date" id="dob"></td></tr>
-            <tr><td>Email:</td><td><input type="Email" name="Email" placeholder="Email"></td></tr>
-            <tr><td>Address:</td><td><textarea rows="5" cols="50"></textarea></td></tr>
-            <tr><td>Occupation Detail:</td><td><textarea name="ocup" rows="3" cols="30"></textarea></td></tr>
-            <tr><td>Password:</td><td><input type="password1" id="password1" placeholder="password1"></td></tr>
-            <tr><td>Re-type Password:</td><td><input type="password2" id="password2" placeholder="password2"></td></tr>
-        </table><br><bR>
-        <input type="submit"  value="Register">
-    </form>
+<body>
 
-    <div >
-      <a href="login.html">Login</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <div class="top_nav">
+        <a href="logout.html">Logout</a>
+        <a href="login.html">Login</a>
+        <a href="profile.html">Profile</a>
+        <a href="Registration.html">Sign Up</a>
+        <a href="index.html">Home</a> 
+
     </div>
-  </div>
-</div>
+    <div class="container" style="height:auto;margin-left: 8%">
+         <h1 style="text-align: center; margin-right: 130px;">Create an Account</h1>
+        
+        <table>
+            <tr>
+                <td>First Name:</td>
+                <td class="high"><input type="text" name="fname" required></td>
+            </tr>
+            <tr>
+                <td class="low"><input type="text" name="fname" required></td>
+            </tr>
+            <tr>
+                <td>Middle Name:</td>
+                <td class="high"><input type="text" name="mname" required></td>
+            </tr>
+            <tr>
+                <td class="low"><input type="text" name="mname" required></td>
+            </tr>
+            <tr>
+                <td>Last Name:</td>
+                <td class="high"><input type="text" name="lname" required></td>
+            </tr>
+            <tr>
+                <td class="low"><input type="text" name="lname" required></td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                    <input type="radio" id="other" name="gender" value="other">
+                    <label for="other">Other</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Date Of Birth: </td>
+                <td class="high"><input type="date" name="dob" required></td>
+            </tr>
+            <tr>
+                <td class="low"><input type="date" name="dob" required></td>
+            </tr>
+            <tr>
+                <td>Email Id:</td>
+                <td class="high"><input type="email" name="email" required></td>
+            </tr>
+            <tr>
+                <td class="low"><input type="email" name="email" required></td>
+            </tr>
+            <tr>
+                <td>Address:</td>
+                <td class="high"><input type="text" name="address" required></td>
+            </tr>
+            <tr>
+                <td class="low"><input type="text name="address" required></td>
+            </tr>
+            <tr>
+                <td>Occupation Detail:</td>
+                <td class="high"><input type="text" name="occu" required></td>
+            </tr>
+            <tr>
+                <td class="low"><input type="text name="occu" required></td>
+            </tr>
+            <tr>
+                <td>Password: </td>
+                <td class="high"><input type="password" name="pass" required></td>
+            </tr>
+            <tr>
+                <td class="low"><input type="password" name="pass" required></td>
+            </tr>
+            <tr>
+                <td>Confirm Password: </td>
+                <td class="high"><input type="password" name="cpass" required></td>
+            </tr>
+            <tr>
+                <td class="low"><input type="password" name="cpass" required></td>
+            </tr>
+            
+            
+            <tr>
+                <td><a href="login.html" class="alreadyHave">Already Have an account?</a></td>
+            </tr>
+            <tr colspan="2">
+                <!-- <td></td> -->
+                <td><a href="index.html"><button class="submit">SignUp</button></a></td>
+            </tr>
+        </table>
+
+</body>
 </html>

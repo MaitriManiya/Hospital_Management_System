@@ -1,34 +1,79 @@
+<!--Doctype-->
+<html lang="en">
+
 <html>
 <head>
+    <title>Create New Case</title>
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
 </head>
-<div>
-  <div>
-    <div>
-        
+<body>
+    
+    <div class="top_nav">
+        <a href="logout.html">Logout</a>
+        <a href="login.html">Login</a>
+        <a href="profile.html">Profile</a>
+        <a href="manageDoctors.html">Doctors</a>
+        <a href="managePatients.html">Patients</a>
+        <a href="index.html">Home</a> 
     </div>
-    <form action="#" method="POST">
-        <a href="adminPages.html">Home</a><br>
-        <h1>Create New Case</h1>
+
+    <div class="sidenav">
+                <a href="createCase.html">Create New Case</a>
+                <a href="AdmitPatient.html">Admit Patient</a>
+                <a href="DischargePatient.html">Discharge Patient</a>
+                <a href="GenerateBill.html">Generate Bill</a>
+                <a href="GenerateCertificate.html">Generate Certificate</a>
+                <a href="ViewAllPatients.html">View All Patinets</a>
+    </div>
+    
+   
+    <div class="container">
+         <h1 style="text-align: center; margin-right: 130px;">Create New Case</h1>
+        
         <table>
-            <tr><td>Name:</td><td><input type="text" name="name" placeholder="Name"></td></tr>
-            <tr><td>Patient ID:</td><td><input type="text" name="pid" placeholder="ID"></td></tr>
-            <tr><td>Occupation Detail:</td><td><input type="text" name="ocup" ></td></tr>
-            <tr><td>Major Disease:</td><td><input type="text" name="major disease" ></td></tr>
-            <tr><td>Doctor ID:</td><td><input type="text" name="did" placeholder="ID"></td></tr>
-            <tr><td>Date</td><td><input type="date" name="date" ></td></tr>
-            <tr><td>Note:</td><td><textarea id="note" rows="5" cols="50"></textarea></td></tr>
-            
             <tr>
-                <td>
-                    <input type="reset" name="cancle" value="Cancle">  
-                </td>
-                <td>
-                    <input type="submit" name="create" value="Create">  
-                </td>
+                <td>Name:</td>
+                <td class="high"><input type="text" name="name" required></td>
+            </tr>
+            <tr>
+                <td class="low"><input type="text" name="name" required></td>
+            </tr>
+            <tr>
+                <td>Patient Id :</td>
+                <td class="high"><input type="text" name="pid" required></td>
+            </tr>
+            <tr>
+                <td class="low"><input type="text" name="pid" required></td>
+            </tr>
+            <tr>
+                <td>Occupation Detail:</td>
+                <td class="high"><input type="text" name="occu" required></td>
+            </tr>
+            <tr>
+                <td class="low"><input type="text name="occu" required></td>
+            </tr>
+            <tr>
+                <td>Major Disease:: </td>
+                <td class="high"><input type="text"  name="disease" required></td>
+            </tr>
+            <tr>
+                <td class="low"><input type="text"  name="disease" required></td>
+            </tr>
+            <tr>
+                <td>Date: </td>
+                <td class="high"><input type="date" name="date" required></td>
+            </tr>
+            <tr>
+                <td class="low"><input type="date" name="date" required></td>
+            </tr>
+            
+            <tr colspan="2">
+                <!-- <td></td> -->
+                <td><a href="#"><button class="submit">Create</button></a></td>
             </tr>
         </table>
-    </form>
+    </div>
 
-  </div>
-</div>
+</body>
+
 </html>

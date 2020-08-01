@@ -1,20 +1,42 @@
+<!DOCTYPE html>
 <html>
 <head>
+    <title>Manage Doctos</title>
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
 </head>
-<div>
-  <div>
-    <div>
+<body>
+    <div class="top_nav">
+        <a href="logout.html">Logout</a>
+        <a href="login.html">Login</a>
+        <a href="profile.html">Profile</a>
         
+        <a href="manageDoctors.html">Doctors</a>
+        <a href="managePatients.html">Patients</a>
+        <a href="index.html">Home</a> 
     </div>
-    <form action="#" method="POST">
-        <a href="adminPages.html">Home</a>
-        <h1>View All Doctors</h1>
+    <div class="sidenav">
+                <a href="ViewAllDoctors.html">View All Doctors</a>
+                <a href="AddDoctor.html">Add Doctor</a>
+    </div>
+    <div class="container">
+         <h1 style="text-align: center; margin-right: 130px;">View All Patinets</h1>
+        
         <table>
-            <tr><td>Doctor ID:</td><td><input type="text" name="did" placeholder="Doctor Id"></td></tr>
-            <tr><td><input type="submit" name="search" value="Search"></td></tr>
+            <tr>
+                <td>Doctor Id :</td>
+                <td class="high"><input type="text" name="did" required></td>
+            </tr>
+            <tr>
+                <td class="low"><input type="text" name="pid" required></td>
+            </tr>
+            
+            
+            
+            <tr>
+                <!-- <td></td> -->
+                <td><a href="#"><button class="submit">Search</button></a></td>
+            </tr>
         </table>
-    </form>
-
-  </div>
-</div>
+    </div>
+</body>
 </html>

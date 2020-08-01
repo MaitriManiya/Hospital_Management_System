@@ -1,48 +1,101 @@
+<!DOCTYPE html>
 <html>
 <head>
+    <title>Patient Page</title>
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
 </head>
-<div>
-  <div>
-    <div>
-        
+<body>
+
+    <div class="top_nav">
+        <a href="logout.html">Logout</a>
+        <a href="login.html">Login</a>
+        <a href="profile.html">Profile</a>
+        <a href="Registration.html">Sign Up</a>
+        <a href="index.html">Home</a> 
+
     </div>
-    <form action="#" method="POST">
-        <a href="index.html">Home</a>
-        <h1>Request For Appointment</h1>
+    <div class="sidenav">
+        <a href="CreateAppointment.html">Create An Appointment</a>
+    </div>
+    <div class="container">
+        <h1 style="text-align: center;">Create An Appointment</h1>
         <table>
-            <tr><td>Name:</td><td><input type="text" name="name" placeholder="Name"></td></tr>
-            <tr><td>Patient ID:</td><td><input type="text" name="pid" placeholder="ID"></td></tr>
-            <tr><td>Date of Appointment:</td><td><input type="date" name="apointment date" ></td></tr>
-            <tr><td>Time:</td><td><input type="time" name="time"></td></tr>
-            <tr><td>Any Note:</td><td><input type="text" id="note" placeholder="any note"></td></tr>
-            <tr><td>Password:</td><td><input type="password1" id="password1" placeholder="password"></td></tr>
             <tr>
-                <td>Specialist</td>
+                <td>Name:</td>
+                <td class="high"><input type="text" name="name" required></td>
+            </tr>
+            <tr>
+                <td class="low"><input type="text" name="name" required></td>
+            </tr>
+            <tr>
+                <td>Patient Id:</td>
+                <td class="high"><input type="text" name="pid" required></td>
+            </tr>
+            <tr>
+                <td class="low"><input type="text" name="pid" required></td>
+            </tr>
+            <tr>
+                <td>Email :</td>
+                <td class="high"><input type="email" name="email" required></td>
+            </tr>
+            <tr>
+                <td class="low"><input type="email" name="email" required></td>
+            </tr>
+            <tr>
+                <td>Mobile No: </td>
+                <td class="high"><input type="tel" name="mobile" required></td>
+            </tr>
+            <tr>
+                <td class="low"><input type="tel" name="mobile" required></td>
+            </tr>
+            <tr>
+                <td>Date of an appointment :</td>
+                <td class="high"><input type="date" name="date" required></td>
+            </tr>
+            <tr>
+                <td class="low"><input type="date" name="date" required></td>
+            </tr>
+            <tr>
+                <td>Any Note:</td>
+                <td class="high"><input type="text" name="note" required></td>
+            </tr>
+            <tr>
+                <td class="low"><input type="text" name="note" required></td>
+            </tr>
+            <tr>
+                <td>Password: </td>
+                <td class="high"><input type="password" id="password" name="password" required></td>
+            </tr>
+            <tr>
+                <td class="low"><input type="password" id="password" name="password" required></td>
+            </tr>
+            <tr>
+                <td>Confirm Password: </td>
+                <td class="high"><input type="password" id="ConPassword" name="ConPassword" required></td>
+            </tr>
+            <tr>
+                <td class="low"><input type="password" id="ConPassword" name="ConPassword" required></td>
+            </tr>
+            <tr>
+                <td>Specialist:</td>
                 <td>
                     <select name="specialist">
                         <option value="sp1">Sp1</option>                        
                     </select>
                 </td>
             </tr>
-            <tr>
-                <td>Doctor Name</td>
+                <td>Doctor Name:</td>
                 <td>
-                    <select name="dname">
-                        <option value="name1">name1</option>                        
+                    <select name="specialist">
+                        <option value="dr1">Dr1</option>                        
                     </select>
                 </td>
             </tr>
-            <tr>
-                <td>
-                    <input type="reset" name="cancle" value="Cancle">  
-                </td>
-                <td>
-                    <input type="submit" name="appoint" value="Request an Appointment">  
-                </td>
+            <tr colspan="2">
+                <!-- <td></td> -->
+                <td><a href="index.html"><button class="submit">Request</button></a></td>
             </tr>
-        </table><br><bR>
-    </form>
-
-  </div>
-</div>
+        </table>
+    </div>
+</body>
 </html>

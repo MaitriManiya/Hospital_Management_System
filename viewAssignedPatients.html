@@ -1,17 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>View Assigned Patients</title>
+	<link rel="stylesheet" type="text/css" href="mystyle.css">
 </head>
 <body>
-<form action="#" method="POST">
-	<a href="index.html">Home</a>
-        <h1>View Assigned Patients</h1>
- 	<table>
-            <tr><td>Patient ID:</td><td><input type="text" name="pid" placeholder="Patient Id"></td></tr>
-            <tr><td><input type="submit" name="search" value="Search"></td></tr>
-        </table>
-</form>
 
+	<div class="top_nav">
+		<a href="logout.html">Logout</a>
+		<a href="login.html">Login</a>
+		<a href="profile.html">Profile</a>
+		<a href="Registration.html">Sign Up</a>
+		<a href="index.html">Home</a> 
+
+	</div>
+	<div class="sidenav">
+		<a href="viewAssignedPatients.html">View Assigned Patinets</a>
+	</div>
+	<div class="container">
+         <h1 style="text-align: center; margin-right: 130px;">View Assigned Patinets</h1>
+        
+        <table>
+            <tr>
+                <td>Doctor Id :</td>
+                <td class="high"><input type="text" name="pid" required></td>
+            </tr>
+            <tr>
+                <td class="low"><input type="text" name="did" required></td>
+            </tr>
+           
+            
+            
+            <tr>
+                <!-- <td></td> -->
+                <td><a href="#"><button class="submit">Search</button></a></td>
+            </tr>
+        </table>
+    </div>
 </body>
 </html>

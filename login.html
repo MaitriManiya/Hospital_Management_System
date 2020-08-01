@@ -1,39 +1,50 @@
+<!DOCTYPE html>
 <html>
 <head>
+  <title>Login</title>
+  <link rel="stylesheet" type="text/css" href="mystyle.css">
 </head>
-<div>
-  <div>
-    <div>
-        
-    </div>
-    <form action="#" method="POST">
-      <a href="index.html">Home</a><br>
-      <h1>Login Page</h1>
+<body>
+
+  <div class="top_nav">
+    <a href="logout.html">Logout</a>
+    <a href="login.html">Login</a>
+    <a href="profile.html">Profile</a>
+    
+    <a href="manageDoctors.html">Doctors</a>
+    <a href="managePatients.html">Patients</a>
+    <a href="index.html">Home</a> 
+  </div>
+  <div class="container" style="height:auto;margin-left: 8%">
+        <h1 style="text-align: center;">Login</h1>
         <table>
             <tr>
-              <td>Username:</td>
-              <td>
-                <input type="text" name="usr"id="login"  name="login" placeholder="Username">
-              </td>
+                <td>Username:</td>
+                <td class="high"><input type="text" name="username" required></td>
             </tr>
             <tr>
-              <td>Password:</td >
-              <td>
-                <input type="password" name="pass"id="password" name="login" placeholder="password">
-              </td>
+                <td class="low"><input type="text" name="username" required></td>
             </tr>
             <tr>
-              <td>
-                <input type="submit"  value="Log In">
-              </td>
+                <td>Password:</td>
+                <td class="high"><input type="password" name="password" required></td>
+            </tr>
+            <tr>
+                <td class="low"><input type="password" name="password" required></td>
+            </tr>
+            <tr>
+                <td><a href="#" class="forgot">Forgot Password?</a></td>
+                <td class="high"><a href="registration.html" class="createNew">Create New Account</a></td>
+            </tr>
+            <tr class="low">
+                <td><a href="signup.html" class="createNew">Create New Account</a></td>
+            </tr>
+            <tr colspan="2">
+                <!-- <td></td> -->
+                <td><a href="index.html"><button class="submit">Login</button></a></td>
             </tr>
         </table>
-    </form>
-
-    <div >
-      <a href="Registration.html">Sign-Up</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <a href="#">Forgot Password</a>
     </div>
-  </div>
-</div>
+
+</body>
 </html>
