@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Admin Page</title>
+    <title>Registration Page</title>
     <link rel="stylesheet" type="text/css" href="mystyle.css">
 </head>
 <body>
-
+<form name="sign" onsubmit="return validateform()">
     <div class="top_nav">
         <a href="logout.html">Logout</a>
         <a href="login.html">Login</a>
@@ -22,23 +22,17 @@
                 <td>First Name:</td>
                 <td class="high"><input type="text" name="fname" required></td>
             </tr>
-            <tr>
-                <td class="low"><input type="text" name="fname" required></td>
-            </tr>
+            
             <tr>
                 <td>Middle Name:</td>
                 <td class="high"><input type="text" name="mname" required></td>
             </tr>
-            <tr>
-                <td class="low"><input type="text" name="mname" required></td>
-            </tr>
+            
             <tr>
                 <td>Last Name:</td>
                 <td class="high"><input type="text" name="lname" required></td>
             </tr>
-            <tr>
-                <td class="low"><input type="text" name="lname" required></td>
-            </tr>
+           
             <tr>
                 <td>Gender:</td>
                 <td>
@@ -54,44 +48,32 @@
                 <td>Date Of Birth: </td>
                 <td class="high"><input type="date" name="dob" required></td>
             </tr>
-            <tr>
-                <td class="low"><input type="date" name="dob" required></td>
-            </tr>
+            
             <tr>
                 <td>Email Id:</td>
                 <td class="high"><input type="email" name="email" required></td>
             </tr>
-            <tr>
-                <td class="low"><input type="email" name="email" required></td>
-            </tr>
+            
             <tr>
                 <td>Address:</td>
                 <td class="high"><input type="text" name="address" required></td>
             </tr>
-            <tr>
-                <td class="low"><input type="text name="address" required></td>
-            </tr>
+           
             <tr>
                 <td>Occupation Detail:</td>
                 <td class="high"><input type="text" name="occu" required></td>
             </tr>
-            <tr>
-                <td class="low"><input type="text name="occu" required></td>
-            </tr>
+           
             <tr>
                 <td>Password: </td>
                 <td class="high"><input type="password" name="pass" required></td>
             </tr>
-            <tr>
-                <td class="low"><input type="password" name="pass" required></td>
-            </tr>
+            
             <tr>
                 <td>Confirm Password: </td>
                 <td class="high"><input type="password" name="cpass" required></td>
             </tr>
-            <tr>
-                <td class="low"><input type="password" name="cpass" required></td>
-            </tr>
+            
             
             
             <tr>
@@ -102,6 +84,34 @@
                 <td><a href="index.html"><button class="submit">SignUp</button></a></td>
             </tr>
         </table>
-
+</form>
 </body>
 </html>
+<script>
+        function validateform(){  
+            //var username=document.sign.user.value;  
+            var password=document.sign.pass.value;  
+            var confirm_password=document.sign.cpass.value;  
+            var email=document.sign.email.value;
+
+            if(password.length<6)
+            {  
+              alert("Password must be at least 6 characters long.");  
+              return false;  
+            }
+            else if(password!=confirm_password)    
+            {  
+              alert("Both password must be match!");  
+              return false;  
+            }    
+            else if(email.indexOf("@") == -1 || email.length < 6){
+                alert("Please Enter valid Email");
+                return false;
+            }
+            //document.write("User Name:\t"+username+"<br>");
+            document.write("Password:\t"+password+"<br>");
+            document.write("Email:\t"+email+"<br>");
+            alert("Form Submitted Successfully!");
+            return true;
+        }
+    </script>

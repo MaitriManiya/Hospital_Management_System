@@ -5,9 +5,10 @@
 <head>
     <title>Create New Case</title>
     <link rel="stylesheet" type="text/css" href="mystyle.css">
+    
 </head>
 <body>
-    
+<form name="Case" onsubmit="return validateform()">    
     <div class="top_nav">
         <a href="logout.html">Logout</a>
         <a href="login.html">Login</a>
@@ -33,39 +34,29 @@
         <table>
             <tr>
                 <td>Name:</td>
-                <td class="high"><input type="text" name="name" required></td>
+                <td><input type="text" name="name" required></td>
             </tr>
-            <tr>
-                <td class="low"><input type="text" name="name" required></td>
-            </tr>
+            
             <tr>
                 <td>Patient Id :</td>
-                <td class="high"><input type="text" name="pid" required></td>
+                <td><input type="text" name="pid" required></td>
             </tr>
-            <tr>
-                <td class="low"><input type="text" name="pid" required></td>
-            </tr>
+            
             <tr>
                 <td>Occupation Detail:</td>
-                <td class="high"><input type="text" name="occu" required></td>
+                <td ><input type="text" name="occu" required></td>
             </tr>
-            <tr>
-                <td class="low"><input type="text name="occu" required></td>
-            </tr>
+            
             <tr>
                 <td>Major Disease:: </td>
-                <td class="high"><input type="text"  name="disease" required></td>
+                <td ><input type="text"  name="disease" ></td>
             </tr>
-            <tr>
-                <td class="low"><input type="text"  name="disease" required></td>
-            </tr>
+            
             <tr>
                 <td>Date: </td>
-                <td class="high"><input type="date" name="date" required></td>
+                <td><input type="date" name="date" required></td>
             </tr>
-            <tr>
-                <td class="low"><input type="date" name="date" required></td>
-            </tr>
+            
             
             <tr colspan="2">
                 <!-- <td></td> -->
@@ -73,7 +64,35 @@
             </tr>
         </table>
     </div>
-
+</form>
 </body>
 
 </html>
+
+<script>
+        function validateform(){  
+
+            var pid=document.case.pid.value;  
+            var name=document.case.name.value;
+
+           // var priscription=document.follow.priscription.value;  
+            var disease=document.case.disease.value;
+            if (pid==null || pid==""){  
+              alert("Patient ID can't be blank");  
+              return false;  
+            }   
+            if (name==null || name==""){  
+              alert("name can't be blank");  
+              return false;  
+            }
+            if (disease==null || disease==""){  
+              alert("disease can't be blank");  
+              return false;  
+            }
+            document.write("Patient ID:\t"+pid+"<br>");
+            document.write("Name:\t"+name+"<br>");
+            document.write("Disease:\t"+disease+"<br>");
+            alert("Form Submitted Successfully!");
+            return true;
+        }
+    </script>
