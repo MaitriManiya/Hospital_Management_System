@@ -1,9 +1,10 @@
-
 body {
     margin: 0px;
+    
 }
 .top_nav {
   z-index: 1;
+   float: right;
   overflow: 
   hidden;
   background-color: rgb(0, 139, 139);
@@ -16,7 +17,8 @@ body {
 }
 
 .top_nav a {
-  float: right;
+
+  
   display: block;
   color: white;
   text-align: center;
@@ -26,27 +28,54 @@ body {
 }
 
 .top_nav a:hover {
-  /*background-color: rgb(143, 188, 143);*/
+   background-color: #ddd;
   color: black;
+  /*background-color: rgb(143, 188, 143);*/
+  }
+    .top_nav-right {
+  float: right;
 }
+
+
 .big_image {
     width: 100vw;
     margin-top: 50px;
     position: relative;
+     display: block;
+  
+  height: auto;
 }
 .background-img
 {
   position: relative;
 }
+
 .text_over_image
 {
+   
   position: absolute;
-  top: 40%;
-  left: 15%;
-  color: red;
-  font-size: 50px;
-    font-weight: bold;
+  bottom: 0;
+
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  
+  width: 100%;
+  height: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  
+  font-size: 40px;
+  
+  
+  padding-top: 150px;
+  text-align: center;
+  
  
+}
+
+.big_image:hover .text_over_image {
+  opacity: 1;
 }
 .images
 {
@@ -102,7 +131,6 @@ a {
     text-decoration: none;
     cursor: default;
 }
-
 .sidenav {
   margin-top:55px;
   height: 100%;
@@ -112,7 +140,7 @@ a {
   top: 0;
   left: 0;
   background-color: #A9A9A9;
-  overflow-x: hidden;
+  
   padding-top: 20px;
 }
 
@@ -125,7 +153,9 @@ a {
 }
 
 .sidenav a:hover {
-  color: #f1f1f1;
+  color: black;
+  background-color: #ddd;
+  width: 220px;
 }
 
 .container {
