@@ -1,0 +1,64 @@
+<div class="top_nav">	
+		<div class="top_nav-right">
+			<ul class="nav nav-pills ">
+				<li class="nav-item">
+	   				<a class="nav-link" routerLink="/index" routerLinkActive="active" >Home</a> 
+	  			</li>
+	  			<li class="nav-item">
+	    			<a class="nav-link "   routerLink="/managePatients" routerLinkActive="active">Patients</a>
+	  			</li>
+				<li class="nav-item">
+		    		<a class="nav-link active" style="background-color: #A9A9A9;" routerLink="/manageDoctors" routerLinkActive="active">Doctors</a>
+				</li>
+	  			
+	  			<li class="nav-item">
+	   				<a class="nav-link" routerLink="/login" routerLinkActive="active"  *ngIf="!_connectbe.loggedIn()" >Login</a>
+	  			</li>
+	  			<li class="nav-item">
+	   				<a class="nav-link"  class="active" routerLink="/index" routerLinkActive="active" *ngIf="_connectbe.loggedIn()" (click)="_connectbe.logoutUser()">Logout</a>
+	  			</li>
+	  			
+			</ul> 
+		</div>
+		
+	</div>
+
+
+  
+    <div class="sidenav">
+
+        <ul  class="nav nav-pills nav-stacked">
+            <li class="active" style="background-color:rgb(0, 139, 139); width: 100%;"><a  routerLink="/viewAllDoctors" routerLinkActive="active" >View All Doctors</a></li>
+            <li ><a routerLink="/addDoctor" routerLinkActive="active" >Add Doctor</a></li>
+            
+           
+        </ul>
+                
+    </div>
+  
+	<div class="container1">
+	<table class="table">
+    <thead>
+        <tr>
+           <th *ngFor = "let column of headers">
+			{{column}}
+			</th>
+           
+        </tr>
+    </thead>
+    <tbody>
+		<tr *ngFor = "let doctor of doctors">
+			<td>{{doctor.name.firstName}}</td>
+			<td>{{doctor.name.lastName}}</td>
+			<td>{{doctor.email}}</td>
+			<td>{{doctor.contactNo}}</td>
+			<td>{{doctor.gender}}</td>
+			<td>{{doctor.address}}</td>
+			<td>{{doctor.age}}</td>
+			<td>{{doctor.specialist}}</td>
+			<td><button type="submit" class="submit1" (click)="OnEditDoctor(doctor.dId)">Edit</button></td>
+			<td><button type="button"  class="submit1" (click)="OnDeleteDoctor(doctor.dId)">Delete</button></td>
+		</tr>
+    </tbody>
+</table>	
+</div>

@@ -1,0 +1,106 @@
+<div class="top_nav">	
+		<div class="top_nav-right">
+			<ul class="nav nav-pills ">
+				<li class="nav-item">
+	   				<a class="nav-link" routerLink="/index" routerLinkActive="active" >Home</a> 
+	  			</li>
+	  			<li class="nav-item">
+	    			<a class="nav-link "   routerLink="/managePatients" routerLinkActive="active">Patients</a>
+	  			</li>
+				<li class="nav-item">
+		    		<a class="nav-link active" style="background-color: #A9A9A9;" routerLink="/manageDoctors" routerLinkActive="active">Doctors</a>
+				</li>
+	  			
+	  			<li class="nav-item">
+	   				<a class="nav-link" routerLink="/login"  *ngIf="!_connectbe.loggedIn()" routerLinkActive="active" >Login</a>
+	  			</li>
+	  			<li class="nav-item">
+	   				<a class="nav-link"  class="active" routerLink="/index" routerLinkActive="active"  *ngIf="_connectbe.loggedIn()" (click)="_connectbe.logoutUser()">Logout</a>
+	  			</li>
+	  			
+			</ul> 
+		</div>
+		
+	</div>
+    <div class="sidenav">
+
+        <ul  class="nav nav-pills nav-stacked">
+            <li class="active" style="background-color:rgb(0, 139, 139); width: 100%;"><a  routerLink="/viewAllDoctors" routerLinkActive="active" >View All Doctors</a></li>
+            <li ><a routerLink="/addDoctor" routerLinkActive="active" >Add Doctor</a></li>
+            
+           
+        </ul>
+                
+    </div>
+    
+    <div class="container" style="height:auto;">
+		<form class="form">
+			<table>
+				<tr>
+					<td>First Name:</td>
+					<td class="high"><input  type="text" [(ngModel)]="doctor.name.firstName"  name="firstName"  required></td>
+				</tr>
+				<tr>
+					<td>Last Name:</td>
+					<td class="high"><input  type="text" [(ngModel)]="doctor.name.lastName"   name="lastName" required></td>
+				</tr>
+
+				<tr>
+					<td>Email Id: </td>
+					<td class="high"><input type="email" [(ngModel)]="doctor.email"  name="email" required></td>
+				</tr>
+				
+
+				<tr>
+					<td>Contact Number: </td>
+					<td class="high"><input type="tel"  [(ngModel)]="doctor.contactNo"   name="contactNo" required></td>
+				</tr>
+
+				 <tr>
+					<td>Gender:</td>
+					<td>
+					
+						<div class="inline-flex">
+								<input class="hidden" type="radio" id="male" value="male"  [(ngModel)]="doctor.gender"  name="gender"/>
+								<label class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-2 px-4 cursor-pointer rounded-l"  name="male">Male</label>
+
+								<input class="hidden" type="radio" id="female" value="female" [(ngModel)]="doctor.gender"   name="gender" />
+								<label class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-2 px-4 cursor-pointer" name="female">Female</label>
+								
+								<input class="hidden" type="radio" id="other" value="other" [(ngModel)]="doctor.gender"   name="gender" />
+								<label class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-2 px-4 cursor-pointer rounded-r" name="other">Other</label>
+						</div>
+					
+					</td>
+				</tr>
+				<tr>
+					<td>Age:</td>
+					<td class="high"><input type="Number" [(ngModel)]="doctor.age" name="age"  required></td>
+				</tr>
+				<tr>
+					<td>Address:</td>
+					<td class="high"><input type="text" [(ngModel)]="doctor.address"  name="address"  required></td>
+				</tr>
+			
+				<tr>
+					<td>Specialist: </td>
+					<td class="high"><input type="text" [(ngModel)]="doctor.specialist"  name="specialist" required></td>
+				</tr>
+				<tr></tr>
+				<tr colspan="2">
+                <!-- <td></td> -->
+                <!--<td><a href="#"><button class="submit">Add</button></a></td>-->
+			
+					<td>
+						<button  class="submit2" (click)="OnUpdateDoctor(doctor.dId)">Update</button>
+					</td>
+				
+					<td>
+						<button  class="submit2" type="Cancle" routerLink="/viewAllDoctors" routerLinkActive="active">Cancle</button>
+					</td>
+					
+            </tr>
+			</table>
+		</form>
+    </div>
+    

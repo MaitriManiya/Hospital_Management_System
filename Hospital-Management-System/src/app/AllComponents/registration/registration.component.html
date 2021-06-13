@@ -1,0 +1,94 @@
+<form name="sign" >
+    <div class="top_nav">   
+        <div class="top_nav-right">
+            <ul class="nav nav-pills ">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/index" routerLinkActive="active">Home</a> 
+                </li>
+                 
+                
+                <li class="nav-item">
+                    <a class="nav-link active"   *ngIf="!_connectbe.loggedIn()"  routerLink="/registration" routerLinkActive="active" style="background-color: #A9A9A9;">Sign Up</a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="nav-link" *ngIf="!_connectbe.loggedIn()" routerLink="/loginPatient" routerLinkActive="active">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"  *ngIf="_connectbe.loggedIn()" class="active" routerLink="/index"  routerLinkActive="active" (click)="_connectbe.logoutUser()">Logout</a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+
+  
+    <div class="container" style="margin-left: 300px;height: 740px;">
+         <h1 style="text-align: center; margin-right: 130px;">Create an Account</h1>
+        
+        <table>
+            <tr>
+                <td>First Name:</td>
+                <td class="high"><input type="text" [(ngModel)]="registerUserData.name.firstName" name="firstName" required></td>
+            </tr>   
+            <tr>
+                <td>Last Name:</td>
+                <td class="high"><input type="text" [(ngModel)]="registerUserData.name.lastName" name="lastName" required></td>
+            </tr>
+           
+           <tr>
+                <td>Gender:</td>
+                <td>
+                   
+                   <div class="inline-flex">
+                        <input class="hidden" type="radio" id="male" value="male"[(ngModel)]="registerUserData.gender" name="gender"/>
+                        <label class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-2 px-4 cursor-pointer rounded-l"  name="male">Male</label>
+
+                        <input class="hidden" type="radio" id="female" value="female" [(ngModel)]="registerUserData.gender" name="gender" />
+                        <label class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-2 px-4 cursor-pointer" name="female">Female</label>
+                        
+                        <input class="hidden" type="radio" id="other" value="other" [(ngModel)]="registerUserData.gender"  name="gender" />
+                        <label class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-2 px-4 cursor-pointer rounded-r" name="other">Other</label>
+                    </div>
+                </td>
+            </tr>
+             <tr>
+                <td>Age:</td>
+                <td class="high"><input type="Number"  [(ngModel)]="registerUserData.age" name="age" required></td>
+            </tr>
+            <tr>
+                <td>Email Id: </td>
+                <td class="high"><input type="email" [(ngModel)]="registerUserData.email"  name="email" required></td>
+            </tr>
+             <tr>
+                <td>Contact Number: </td>
+                <td class="high"><input type="tel"  [(ngModel)]="registerUserData.contactNo"  name="contactNo" required></td>
+            </tr>
+            <tr>
+                <td>Address:</td>
+                <td class="high"><input type="text" [(ngModel)]="registerUserData.address" name="address" required></td>
+            </tr>
+            
+            <tr>
+                <td>Password: </td>
+                <td class="high"><input type="password" [(ngModel)]="registerUserData.password" name="password" required></td>
+            </tr>
+            
+            <tr>
+                <td>Confirm Password: </td>
+                <td class="high"><input type="password" name="confirmPassword" required></td>
+            </tr>
+            
+            
+            
+            <tr>
+                <td><a routerLink="/login" routerLinkActive="active"  class="alreadyHave">Already Have an account?</a></td>
+            </tr>
+            <tr colspan="2">
+                
+                <td><a  ><button class="submit" type="button" (click)="registerUser()">SignUp</button></a></td>
+            </tr>
+        </table>
+        </div>
+</form>

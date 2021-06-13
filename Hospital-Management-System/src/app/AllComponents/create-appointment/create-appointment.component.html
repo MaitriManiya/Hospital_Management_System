@@ -1,0 +1,83 @@
+<div class="top_nav">   
+        <div class="top_nav-right">
+            <ul class="nav nav-pills ">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/index" routerLinkActive="active">Home</a> 
+                </li>
+               
+                <li class="nav-item">
+                    <a class="nav-link"   *ngIf="!_connectbe.loggedIn()" routerLink="/registration" routerLinkActive="active">Sign Up</a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="nav-link " *ngIf="!_connectbe.loggedIn()" routerLink="/login" routerLinkActive="active">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" *ngIf="_connectbe.loggedIn()" class="active" routerLink="/index" routerLinkActive="active" (click)="_connectbe.logoutUser()" >Logout</a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+
+  
+    <div class="sidenav">
+
+        <ul  class="nav nav-pills nav-stacked">
+            <li class="active" style="background-color:rgb(0, 139, 139); width: 100%;"><a routerLink="/createAppointment" routerLinkActive="active" >Create An Appointment</a></li>
+            
+            
+           
+        </ul>
+                
+    </div>
+
+    <div class="container" style="height: auto;">
+        <h1 style="text-align: center;">Create An Appointment</h1>
+        <table>
+            <tr>
+                <td>First Name:</td>
+                <td class="high"><input type="text" name="firstName" [(ngModel)]="appointmentData.name.firstName" required></td>
+            </tr>
+             <tr>
+                <td>Last Name:</td>
+                <td class="high"><input type="text" name="lastName"  [(ngModel)]="appointmentData.name.lastName" required></td>
+            </tr>
+           
+            
+           <!-- <tr>
+                <td>Email Id:</td>
+                <td class="high"><input type="email" name="email" required></td>
+            </tr>
+           
+            <tr>
+                <td>Contact No: </td>
+                <td class="high"><input type="tel" name="contactNo" required></td>
+            </tr>-->
+           
+            <tr>
+                <td>Date of an appointment :</td>
+                <td class="high"><input type="date" name="DateOfApp" [(ngModel)]="appointmentData.DateOfApp" required></td>
+            </tr>
+           
+           
+            
+            <tr>
+                <td>Specialist:</td>
+                <td>
+                    <select name="Specialist" [(ngModel)]="appointmentData.Specialist">
+                        <option value="Cardiologist">Cardiologist</option>
+                        <option value="Dentist">Dentist</option>
+                        <option value="Physician">Physician</option>
+                        <option value="Dermatologist">Dermatologist</option>
+                        <option value="Pediatricians">Pediatricians</option>                        
+                    </select>
+                </td>
+            </tr>
+            <tr colspan="2">
+             
+                <td><a ><button class="submit" type="button" (click)="OnCreateApp()">Create</button></a></td>
+            </tr>
+        </table>
+    </div>

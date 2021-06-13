@@ -1,0 +1,36 @@
+<div class="top_nav">   
+        <div class="top_nav-right">
+            <ul class="nav nav-pills ">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/index" routerLinkActive="active">Home</a> 
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active " routerLink="/profile" routerLinkActive="active" style="background-color: #A9A9A9;">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"  *ngIf="!_connectbe.loggedIn()"  routerLink="/registration" routerLinkActive="active">Sign Up</a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="nav-link" *ngIf="!_connectbe.loggedIn()" routerLink="/loginPatient" routerLinkActive="active">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"  *ngIf="_connectbe.loggedIn()" class="active" routerLink="/index"  routerLinkActive="active" (click)="_connectbe.logoutUser()">Logout</a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+
+	
+	<div class="container" style="margin-left: 300px;">
+         <h1 style="text-align: center; ">My Profile</h1>
+        <table class="table">
+            <tr let>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+        
+    </div>

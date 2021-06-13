@@ -1,0 +1,48 @@
+<div class="top_nav">	
+		<div class="top_nav-right">
+			<ul class="nav nav-pills ">
+				<li class="nav-item">
+	   				<a class="nav-link"  routerLink="/index" routerLinkActive="active" >Home</a> 
+	  			</li>
+	  			<li class="nav-item">
+	    			<a class="nav-link" routerLink="/managePatients" routerLinkActive="active"  >Patients</a>
+	  			</li>
+				<li class="nav-item">
+		    		<a class="nav-link"  routerLink="/manageDoctors" routerLinkActive="active"   >Doctors</a>
+				</li>
+	  			<li class="nav-item">
+	   				<a class="nav-link active" style="background-color: #A9A9A9;"  routerLink="/adminProfile" routerLinkActive="active"  >Profile</a>
+	  			</li>
+	  			<li class="nav-item">
+	   				<a class="nav-link"  routerLink="/login" routerLinkActive="active" >Login</a>
+	  			</li>
+	  			<li class="nav-item">
+	   				<a class="nav-link" class="active"  routerLink="/logout" routerLinkActive="active" >Logout</a>
+	  			</li>
+	  			
+			</ul>
+		</div>
+		
+	</div>
+
+	
+	<div class="container" style="margin-left: 300px;">
+         <h1 style="text-align:center;">My Profile</h1>
+        
+        <table>
+            <tr>
+                <td>Name:</td>
+                <td class="high"><input type="text" name="name" required></td>
+            </tr>
+           
+            <tr>
+                <td>Id :</td>
+                <td class="high"><input type="text" name="id" required></td>
+            </tr>
+            
+            <tr colspan="2">
+                <!-- <td></td> -->
+                <td><a href="#"><button class="submit">Update</button></a></td>
+            </tr>
+        </table>
+    </div>

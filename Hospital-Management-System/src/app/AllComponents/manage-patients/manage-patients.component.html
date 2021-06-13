@@ -1,0 +1,42 @@
+<div class="top_nav">	
+		<div class="top_nav-right">
+			<ul class="nav nav-pills ">
+				<li class="nav-item">
+	   				<a class="nav-link" routerLink="/index" routerLinkActive="active" >Home</a> 
+	  			</li>
+	  			<li class="nav-item">
+	    			<a class="nav-link active" style="background-color: #A9A9A9;"  routerLink="/managePatients" routerLinkActive="active">Patients</a>
+	  			</li>
+				<li class="nav-item">
+		    		<a class="nav-link"  routerLink="/manageDoctors" routerLinkActive="active">Doctors</a>
+				</li>
+	  			<li class="nav-item">
+	   				<a class="nav-link" *ngIf="!_connectbe.loggedIn()" routerLink="/login" routerLinkActive="active" >Login</a>
+	  			</li>
+	  			<li class="nav-item">
+	   				<a class="nav-link" *ngIf="_connectbe.loggedIn()" class="active" routerLink="/index" routerLinkActive="active" (click)="_connectbe.logoutUser()">Logout</a>
+	  			</li>
+	  			
+			</ul> 
+		</div>
+		
+	</div>
+	
+
+
+    <div class="sidenav" id="side_nav">
+    	<ul  class="nav nav-pills nav-stacked">
+    		<li><a routerLink="/ViewAllAppointment" routerLinkActive="active" >View All Appointments</a></li>
+           <!-- <li><a routerLink="/generateCertificate" routerLinkActive="active" >Generate Certificate</a></li>-->
+            <li><a routerLink="/viewAllPatients" routerLinkActive="active" >View All Patinets</a></li>
+    	</ul>
+                
+    </div>
+
+    
+   
+
+    
+	<div class="background-img">
+		<img src="assets/image/background.jpg" alt="background image" style="padding-left: 220px; width:100%;height:610px; padding-top: 50px;">
+	</div>

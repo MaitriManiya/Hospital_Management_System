@@ -1,0 +1,91 @@
+<div class="top_nav">   
+        <div class="top_nav-right">
+            <ul class="nav nav-pills ">
+                <li class="nav-item">
+	   				<a class="nav-link" routerLink="/index" routerLinkActive="active" >Home</a> 
+	  			</li>
+	  			<li class="nav-item">
+	    			<a class="nav-link active" style="background-color: #A9A9A9;"  routerLink="/managePatients" routerLinkActive="active">Patients</a>
+	  			</li>
+				<li class="nav-item">
+		    		<a class="nav-link"  routerLink="/manageDoctors" routerLinkActive="active">Doctors</a>
+				</li>
+	  			<li class="nav-item">
+	   				<a class="nav-link "   routerLink="/adminProfile" routerLinkActive="active" >Profile</a>
+	  			</li>
+	  			<li class="nav-item">
+	   				<a class="nav-link" routerLink="/login" routerLinkActive="active" >Login</a>
+	  			</li>
+	  			<li class="nav-item">
+	   				<a class="nav-link"  class="active" routerLink="/logout" routerLinkActive="active">Logout</a>
+	  			</li>
+                
+            </ul>
+        </div>
+        
+    </div>
+
+ 
+    <div class="sidenav" id="nav_side">
+
+        <ul  class="nav nav-pills nav-stacked">
+            <li ><a routerLink="/createCase" routerLinkActive="active">Create New Case</a></li>
+            <li class="active" style="background-color:rgb(0, 139, 139); width: 100%;"><a routerLink="/admitPatient" routerLinkActive="active">Admit Patient</a></li>
+            <li><a routerLink="/dischargePatient" routerLinkActive="active">Discharge Patient</a></li>
+            <li><a routerLink="/generateBill" routerLinkActive="active">Generate Bill</a></li>
+            <!--<li><a routerLink="/generateCertificate" routerLinkActive="active">Generate Certificate</a></li>-->
+            <li><a routerLink="/viewAllPatients" routerLinkActive="active">View All Patinets</a></li>
+        </ul>
+                
+    </div>
+    
+   
+    <div class="container">
+         <h1 style="text-align: center;">Admit Patient</h1>
+        
+        <table>
+            <tr>
+                <td>Name:</td>
+                <td class="high"><input type="text" name="name" required></td>
+            </tr>
+            
+            <tr>
+                <td>Patient Id :</td>
+                <td class="high"><input type="text" name="pid" required></td>
+            </tr>
+            
+            <tr>
+                <td>Admit date: </td>
+                <td class="high"><input type="date" name="adate" required></td>
+            </tr>
+           
+            <tr>
+                <td><label for="Room Type">Choose a Room type:</label></td>
+                <td>
+                <select name="room" id="room">
+                    <option value="*">select one</option>
+                    <option value="Sharing ward">Sharing ward</option>
+                    <option value="Special ward">Special ward</option>
+                    <option value="Private Room">Private Room</option>
+                    <option value="Delux Room">Delux Room</option>
+                </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Bad number:</td>
+                <td class="high"><input type="text" name="bad" required></td>
+            </tr>
+            
+            <tr>
+                <td>Note: </td>
+                <td class="high"><input type="text"  name="note" required></td>
+            </tr>
+           
+            
+            
+            <tr>
+                <!-- <td></td> -->
+                <td><a href="#"><button class="submit">Submit</button></a></td>
+            </tr>
+        </table>
+    </div>

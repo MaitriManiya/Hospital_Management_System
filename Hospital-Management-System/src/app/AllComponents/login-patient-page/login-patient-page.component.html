@@ -1,0 +1,58 @@
+<div class="top_nav">   
+        <div class="top_nav-right">
+            <ul class="nav nav-pills ">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/index" routerLinkActive="active">Home</a> 
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link"  *ngIf="!_connectbe.loggedIn()"  routerLink="/registration" routerLinkActive="active" >Sign Up</a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="nav-link active " *ngIf="!_connectbe.loggedIn()" class="active" routerLink="/loginPatient" routerLinkActive="active" style="background-color: #A9A9A9;">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"  *ngIf="_connectbe.loggedIn()" routerLink="/index" routerLinkActive="active" (click)="_connectbe.logoutUser()">Logout</a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="sidenav">
+
+        <ul  class="nav nav-pills nav-stacked">
+            <li><a  routerLink="/createAppointment" routerLinkActive="active">Create An Appointment</a></li>
+            
+            
+           
+        </ul>
+                
+    </div>
+    <div class="container" style="margin-left: 310px;">
+        <h1 style="text-align: center;">Login</h1>
+        <table>
+            <tr>
+                <td>Email Id:</td>
+                <td class="high"><input type="text" name="email" [(ngModel)]="loginUserData.email" required></td>
+            </tr>
+            
+            <tr>
+                <td>Password:</td>
+                <td class="high"><input type="password" name="password" [(ngModel)]="loginUserData.password" required></td>
+            </tr>
+           
+            <tr>
+                <td><a href="#" class="forgot">Forgot Password?</a></td>
+                <td class="high"><a routerLink="/registration" routerLinkActive="active"  class="createNew">Create New Account</a></td>
+            </tr>
+            
+            <tr colspan="2">
+                <!-- <td></td> -->
+                <td><a ><button class="submit" type="button" (click)="loginUser()">Login</button></a></td>
+            </tr>
+        </table>
+    </div>

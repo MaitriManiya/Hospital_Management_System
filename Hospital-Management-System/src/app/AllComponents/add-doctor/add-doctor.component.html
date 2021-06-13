@@ -1,0 +1,106 @@
+<div class="top_nav">	
+		<div class="top_nav-right">
+			<ul class="nav nav-pills ">
+				<li class="nav-item">
+	   				<a class="nav-link" routerLink="/index" routerLinkActive="active" >Home</a> 
+	  			</li>
+	  			<li class="nav-item">
+	    			<a class="nav-link "   routerLink="/managePatients" routerLinkActive="active">Patients</a>
+	  			</li>
+				<li class="nav-item">
+		    		<a class="nav-link active" style="background-color: #A9A9A9;" routerLink="/manageDoctors" routerLinkActive="active">Doctors</a>
+				</li>
+	  			
+	  			<li class="nav-item">
+	   				<a class="nav-link" routerLink="/login" routerLinkActive="active" *ngIf="!_connectbe.loggedIn()" >Login</a>
+	  			</li>
+	  			<li class="nav-item">
+	   				<a class="nav-link"  class="active" routerLink="/index" routerLinkActive="active" *ngIf="_connectbe.loggedIn()" (click)="_connectbe.logoutUser()" >Logout</a>
+	  			</li>
+	  			
+			</ul> 
+		</div>
+		
+	</div>
+
+     <div class="sidenav">
+
+        <ul  class="nav nav-pills nav-stacked">
+            <li ><a  routerLink="/viewAllDoctors" routerLinkActive="active" >View All Doctors</a></li>
+            <li class="active" style="background-color:rgb(0, 139, 139); width: 100%;"><a routerLink="/addDoctor" routerLinkActive="active" >Add Doctor</a></li>
+            
+           
+        </ul>
+                
+    </div>
+    
+    
+    <div class="container" style="height:auto;">
+         <h1 style="text-align: center; ">Add Doctor</h1>
+    <form  class="form" #addDoctorForm="ngForm">    
+        <table>
+            <tr>
+                <td>First Name:</td>
+                <td class="high"><input  type="text" [(ngModel)]="addDoctorData.name.firstName" name="firstName" required></td>
+            </tr>
+           
+           <tr>
+                <td>Last Name:</td>
+                <td class="high"><input  type="text" [(ngModel)]="addDoctorData.name.lastName" name="lastName" required></td>
+            </tr>
+
+            <tr>
+                <td>Email Id: </td>
+                <td class="high"><input type="email" [(ngModel)]="addDoctorData.email"  name="email" required></td>
+            </tr>
+             
+
+            <tr>
+                <td>Contact Number: </td>
+                <td class="high"><input type="tel" [(ngModel)]="addDoctorData.contactNo"   name="contactNo" required></td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td>
+                   
+                   <div class="inline-flex">
+                        <input class="hidden" type="radio" id="male" value="male" [(ngModel)]="addDoctorData.gender" name="gender"/>
+                        <label class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-2 px-4 cursor-pointer rounded-l"  name="male">Male</label>
+
+                        <input class="hidden" type="radio" id="female" value="female"  [(ngModel)]="addDoctorData.gender" name="gender" />
+                        <label class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-2 px-4 cursor-pointer" name="female">Female</label>
+                        
+                        <input class="hidden" type="radio" id="other" value="other" [(ngModel)]="addDoctorData.gender"  name="gender" />
+                        <label class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-2 px-4 cursor-pointer rounded-r" name="other">Other</label>
+                    </div>
+                </td>
+            </tr>
+         
+            <tr>
+                <td>Age:</td>
+                <td class="high"><input type="Number" [(ngModel)]="addDoctorData.age" name="age" required></td>
+            </tr>
+             <tr>
+                <td>Address:</td>
+                <td class="high"><input type="text"  name="address" [(ngModel)]="addDoctorData.address" required></td>
+            </tr>
+        
+            <tr>
+                <td>Specialist: </td>
+                <td class="high"><input type="text" [(ngModel)]="addDoctorData.specialist" name="specialist" required></td>
+            </tr>
+         
+           
+            
+            
+           
+           
+            <tr colspan="2">
+             
+                <td>
+                    <button (click)="addDoctor()" class="submit">Add</button>
+                </td>
+            </tr>
+        </table>
+        </form>
+        </div>
